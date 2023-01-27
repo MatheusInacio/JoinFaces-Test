@@ -1,4 +1,4 @@
-package br.com.joinfacestest.joinfacestest;
+package br.com.joinfacestest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

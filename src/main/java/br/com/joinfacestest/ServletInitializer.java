@@ -1,4 +1,4 @@
-package br.com.joinfacestest.joinfacestest;
+package br.com.joinfacestest;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

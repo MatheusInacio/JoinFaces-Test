@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:p="http://primefaces.org/ui" xmlns:pe="http://primefaces.org/ui/extensions" xmlns:o="http://omnifaces.org/ui">
+
+<h:head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>Cadastro de Clientes</title>
+
+    <link type="text/css" href="https://unpkg.com/primeflex@^3/primeflex.css" rel="stylesheet" />
+
+    <style>
+        .container {
+            max-width: 1280px;
+            margin: auto;
+        }
+        
+        * {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-size: 1rem;
+        }
+    </style>
+
+</h:head>
+
+<h:body>
+
+    <h:form>
+
+        <div class="container pt-5">
+
+            <div class="flex flex-column gap-2 w-fit">
+
+                <label>Nome:</label>
+                <p:inputText value="#{clienteController.cliente.nome}" />
+
+                <label>Email:</label>
+                <p:inputText value="#{clienteController.cliente.email}" type="mail" />
+
+                <p:commandButton value="Salvar" action="#{clienteController.salvar()}" update="@form" process="@form" />
+
+            </div>
+
+            <div class="card mt-5">
+                <p:dataTable var="cliente" value="#{clienteController.listaTodos()}">
+                    <p:column headerText="Nome">
+                        <h:outputText value="#{cliente.nome}" />
+                    </p:column>
+
+                    <p:column headerText="Email">
+                        <h:outputText value="#{cliente.email}" />
+                    </p:column>
+
+                    <p:column headerText="Telefone">
+                        <h:outputText value="#{cliente.telefone}" />
+                    </p:column>
+
+                </p:dataTable>
+            </div>
+        </div>
+    </h:form>
+
+</h:body>
+
+</html>

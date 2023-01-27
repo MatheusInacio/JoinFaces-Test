@@ -1,4 +1,4 @@
-package br.com.joinfacestest.joinfacestest;
+package br.com.joinfacestest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
